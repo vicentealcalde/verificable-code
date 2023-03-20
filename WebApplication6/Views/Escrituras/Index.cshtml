@@ -1,0 +1,53 @@
+@page
+@model Escrituras.pages.Escritura.IndexModel
+@{
+
+
+}
+<br>
+<h2> Lista Escrituras</h2>
+<br/>
+
+
+
+<a class='btn btn-primary btn-sm' href='/Clients/Create'>Nueva escritura</a>
+<table>
+    <thead>
+        <tr>
+            <th> NumAtencion</th>
+            <th> CNE</th>
+            <th> Comuna</th>
+            <th> Manzana</th>
+            <th> Predio</th>
+            <th> Fojas</th>
+            <th> FechaInscripcion</th>
+            <th> NumeroInscripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listescritura)
+        {
+            <tr>
+                <td> @item.NumAtencion</td>
+                <td> @item.CNE</td>
+                <td> @item.Comuna</td>
+                <td> @item.Manzana</td>
+                <td> @item.Predio</td>
+                <td> @item.Fojas</td>
+                <td> @item.FechaInscripcion</td>
+                <td> @item.NumeroInscripcion</td>
+
+
+                <td>
+                    <a class="btn btn-primary btn-sm" nref ="/escrituras/show?id=">"detalle"</a>
+
+                </td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
